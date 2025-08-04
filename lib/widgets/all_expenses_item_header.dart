@@ -3,8 +3,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
 
 class AllExpensesItemHeader extends StatelessWidget {
-  const AllExpensesItemHeader({super.key, required this.image});
+  const AllExpensesItemHeader({super.key, required this.image, this.imageBackground, this.imageColor});
 final String image;
+final Color? imageBackground , imageColor;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -12,13 +13,15 @@ final String image;
         Container(
           padding: EdgeInsets.all(14),
           decoration: ShapeDecoration(
+            color: imageBackground ??Color(0xFFFAFAFA),
             shape: OvalBorder(),
-            color: Color(0xFFFAFAFA),
           ),
-          child: SvgPicture.asset(image),
+          child: SvgPicture.asset(image ,
+          colorFilter: ColorFilter.mode(imageColor?? Color(0xFF4EB7F2), BlendMode.srcIn),
+          ),
         ),
         Spacer(),
-        Icon(Icons.arrow_forward_ios_rounded , color: Color(0xFF064060),),
+        Icon(Icons.arrow_forward_ios_rounded , color: imageColor?? Color(0xFF064060),),
       ],
     );
   }
