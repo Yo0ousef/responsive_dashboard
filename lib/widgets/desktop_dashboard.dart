@@ -18,12 +18,14 @@ class DesktopDashboard extends StatelessWidget {
         ),
         Expanded(
           flex: 2,
-          child: Column(
-            children: [
-              AllExpenses(),
-              SizedBox(height: 24,),
-              QuickInvoice(),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                AllExpenses(),
+                SizedBox(height: 24,),
+                QuickInvoice(),
+              ],
+            ),
           ),
         ),
       ],
