@@ -14,11 +14,24 @@ class AllExpensesItem extends StatelessWidget {
     return AnimatedCrossFade(
       firstChild: ActiveAllExpensesItem(itemModel: itemModel),
       secondChild: InActiveAllExpensesItem(itemModel: itemModel),
-      crossFadeState: isActive? CrossFadeState.showFirst : CrossFadeState.showSecond,
+      crossFadeState:
+          isActive ? CrossFadeState.showFirst : CrossFadeState.showSecond,
       duration: Duration(milliseconds: 400),
     );
-    // isActive
-    //   ? ActiveAllExpensesItem(itemModel: itemModel)
-    //   : InActiveAllExpensesItem(itemModel: itemModel);
+
+    ///TODO: AnimatedSwitcher is fully customizable via transition builder
+    // return AnimatedSwitcher(
+    //   duration: const Duration(milliseconds: 400),
+    //   child:
+    //   isActive
+    //       ? ActiveAllExpensesItem(
+    //           itemModel: itemModel,
+    //           key: ValueKey(1),
+    //         )
+    //       : InActiveAllExpensesItem(
+    //           itemModel: itemModel,
+    //           key: ValueKey(2),
+    //         ),
+    // );
   }
 }
