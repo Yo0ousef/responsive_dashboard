@@ -4,6 +4,7 @@ import 'package:responsive_dashboard/widgets/all_expenses_and_quick_invoice_sect
 import 'package:responsive_dashboard/widgets/custom_drawer.dart';
 import 'package:responsive_dashboard/widgets/my_card.dart';
 import 'package:responsive_dashboard/widgets/my_cards_page_view.dart';
+import 'package:responsive_dashboard/widgets/my_cards_section.dart';
 import 'package:responsive_dashboard/widgets/quick_invoice.dart';
 
 class DesktopDashboard extends StatelessWidget {
@@ -27,7 +28,7 @@ class DesktopDashboard extends StatelessWidget {
           width: 24,
         ),
         Expanded(
-          child: MyCardsPageView(),
+          child: MyCardsSection(),
         ),
         SizedBox(
           width: 24,
