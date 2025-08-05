@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/utils/app_styles.dart';
+import 'package:responsive_dashboard/widgets/custom_button.dart';
 import 'package:responsive_dashboard/widgets/title_text_field.dart';
 
 class QuickInvoiceForm extends StatelessWidget {
@@ -6,9 +8,9 @@ class QuickInvoiceForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        Row(
+        const Row(
           children: [
             Expanded(
               child: TitleTextField(
@@ -16,7 +18,9 @@ class QuickInvoiceForm extends StatelessWidget {
                 hintText: 'Type customer name',
               ),
             ),
-            SizedBox(width: 16,),
+            SizedBox(
+              width: 16,
+            ),
             Expanded(
               child: TitleTextField(
                 title: 'Customer Email',
@@ -25,8 +29,10 @@ class QuickInvoiceForm extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 24,),
-        Row(
+        const SizedBox(
+          height: 24,
+        ),
+        const Row(
           children: [
             Expanded(
               child: TitleTextField(
@@ -34,7 +40,9 @@ class QuickInvoiceForm extends StatelessWidget {
                 hintText: 'Type item name',
               ),
             ),
-            SizedBox(width: 16,),
+            SizedBox(
+              width: 16,
+            ),
             Expanded(
               child: TitleTextField(
                 title: 'Item amount',
@@ -43,7 +51,26 @@ class QuickInvoiceForm extends StatelessWidget {
             ),
           ],
         ),
-
+        SizedBox(height: 24,),
+        Row(
+          children: [
+            Expanded(
+              child: CustomButton(
+                text: 'Add more Details',
+                backgroundColor: Colors.white,
+                textColor: Color(0xFF4EB7F2),
+              ),
+            ),
+            SizedBox(
+              width: 24,
+            ),
+            const Expanded(
+              child: CustomButton(
+                text: 'Send Money',
+              ),
+            ),
+          ],
+        ),
       ],
     );
   }

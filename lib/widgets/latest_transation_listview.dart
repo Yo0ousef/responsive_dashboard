@@ -35,7 +35,7 @@ class LatestTransactionListView extends StatelessWidget {
               .map((e) => IntrinsicWidth(
                     child: UserInfoListTile(userInfoModel: e),
                   ))
-              .toList()),
+              .toList(),),
     );
 
     ///TODO:this solution if I have to use listview horizontally and the height is given based on the height of the children by simple calculation.
