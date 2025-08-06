@@ -29,29 +29,26 @@ class _MyCardsSectionState extends State<MyCardsSection> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 40),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'My Card',
-            style: AppStyles.styleSemiBold20,
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          MyCardsPageView(
-            pageController: pageController,
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          DotsIndicator(
-            currentIndex: currentPageIndex,
-          ),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'My Card',
+          style: AppStyles.styleSemiBold20,
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        MyCardsPageView(
+          pageController: pageController,
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        DotsIndicator(
+          currentIndex: currentPageIndex,
+        ),
+      ],
     );
   }
 }

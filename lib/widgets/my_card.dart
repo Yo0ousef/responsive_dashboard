@@ -50,7 +50,7 @@ class MyCard extends StatelessWidget {
                   Text(
                     '0918 8124 0042 8129',
                     style:
-                        AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+                        AppStyles.styleSemiBold24.copyWith(color: Colors.white,fontWeight: FontWeight.w500),
                   ),
                   Text(
                     '12/20 - 124',
