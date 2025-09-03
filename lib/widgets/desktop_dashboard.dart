@@ -19,29 +19,46 @@ class DesktopDashboard extends StatelessWidget {
           width: 32,
         ),
         Expanded(
-          flex: 2,
-          child: AllExpensesAndQuickInvoiceSection(),
-        ),
-        SizedBox(
-          width: 24,
-        ),
-        Expanded(
-          child: Column(
-            children: [
-              SizedBox(height: 40,),
-              MyCardsAndTransactionHistorySection(),
-              SizedBox(height: 24,),
-              Expanded(
-                child: IncomeSection(),
-                // child: MyCardsAndTransactionHistorySection(),
+          flex: 3,
+          child: CustomScrollView(slivers: [
+            SliverFillRemaining(
+              hasScrollBody: false,
+              child: Row(
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(vertical: 20.0),
+                      child: AllExpensesAndQuickInvoiceSection(),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 24,
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(vertical: 20.0),
+                      child: Column(
+                        children: [
+                          MyCardsAndTransactionHistorySection(),
+                          SizedBox(
+                            height: 24,
+                          ),
+                          Expanded(
+                            child: IncomeSection(),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ]),
         ),
         SizedBox(
           width: 24,
         ),
-
       ],
     );
   }
