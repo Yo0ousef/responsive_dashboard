@@ -9,23 +9,55 @@ class IncomeDetailsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Container(
-        width: 12,
-        height: 12,
-        decoration: ShapeDecoration(
-          color: incomeDetailsModel.color,
-          shape: OvalBorder(),
+    return Padding(
+      padding: const EdgeInsets.only(left: 8),
+      child: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Row(
+          children: [
+            Container(
+              width: 12,
+              height: 12,
+              decoration: ShapeDecoration(
+                color: incomeDetailsModel.color,
+                shape: OvalBorder(),
+              ),
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Text(
+              incomeDetailsModel.title,
+              style: AppStyles.styleRegular16,
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Text(
+              incomeDetailsModel.value,
+              style: AppStyles.styleMedium16,
+            ),
+          ],
         ),
       ),
-      title: Text(
-        incomeDetailsModel.title,
-        style: AppStyles.styleRegular16,
-      ),
-      trailing: Text(
-        incomeDetailsModel.value,
-        style: AppStyles.styleMedium16,
-      ),
     );
+    //   ListTile(
+    //   leading: Container(
+    //     width: 12,
+    //     height: 12,
+    //     decoration: ShapeDecoration(
+    //       color: incomeDetailsModel.color,
+    //       shape: OvalBorder(),
+    //     ),
+    //   ),
+    //   title: Text(
+    //     incomeDetailsModel.title,
+    //     style: AppStyles.styleRegular16,
+    //   ),
+    //   trailing: Text(
+    //     incomeDetailsModel.value,
+    //     style: AppStyles.styleMedium16,
+    //   ),
+    // );
   }
 }

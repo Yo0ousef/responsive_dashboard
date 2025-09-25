@@ -19,14 +19,14 @@ class DesktopDashboard extends StatelessWidget {
           width: 32,
         ),
         Expanded(
-          flex: 3,
+          flex: 4,
           child: CustomScrollView(slivers: [
             SliverFillRemaining(
               hasScrollBody: false,
               child: Row(
                 children: [
                   Expanded(
-                    flex: 2,
+                    flex: 3,
                     child: Padding(
                       padding: EdgeInsets.symmetric(vertical: 20.0),
                       child: AllExpensesAndQuickInvoiceSection(),
@@ -36,6 +36,7 @@ class DesktopDashboard extends StatelessWidget {
                     width: 24,
                   ),
                   Expanded(
+                    flex:2,
                     child: Padding(
                       padding: EdgeInsets.symmetric(vertical: 20.0),
                       child: Column(

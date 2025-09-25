@@ -4,7 +4,6 @@ import 'package:responsive_dashboard/widgets/income_details_item.dart';
 
 class IncomeDetails extends StatelessWidget {
   const IncomeDetails({super.key});
-
   static const items = [
     IncomeDetailsModel(
       value: '%40',
@@ -30,12 +29,8 @@ class IncomeDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: items.map((e)=>IncomeDetailsItem(incomeDetailsModel: e)).toList(),);
-    // return ListView.builder(
-    //     shrinkWrap: true,
-    //     itemCount: items.length,
-    //     itemBuilder: (context, index) {
-    //       return IncomeDetailsItem(incomeDetailsModel: items[index]);
-    //     });
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: items.map((e)=>IncomeDetailsItem(incomeDetailsModel: e)).toList(),);
   }
 }
