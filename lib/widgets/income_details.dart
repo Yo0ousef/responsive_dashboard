@@ -17,7 +17,7 @@ class IncomeDetails extends StatelessWidget {
     ),
     IncomeDetailsModel(
       value: '%22',
-      title: 'Product royalti',
+      title: 'Product royalty',
       color: Color(0xff064061),
     ),
     IncomeDetailsModel(

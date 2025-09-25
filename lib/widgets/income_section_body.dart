@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/widgets/detailed_income_chart.dart';
 
 import '../utils/size_config.dart';
 import 'income_chart.dart';
@@ -13,7 +14,7 @@ class IncomeSectionBody extends StatelessWidget {
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
     return width >= SizeConfig.desktop && width < 1400
-        ? Expanded(child: IncomeChart())
+        ? Expanded(child: DetailedIncomeChart())
         : Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
