@@ -28,14 +28,14 @@ class IncomeDetailsItem extends StatelessWidget {
             ),
             Text(
               incomeDetailsModel.title,
-              style: AppStyles.styleRegular16,
+              style: AppStyles.styleRegular16(context),
             ),
             SizedBox(
               width: 10,
             ),
             Text(
               incomeDetailsModel.value,
-              style: AppStyles.styleMedium16,
+              style: AppStyles.styleMedium16(context),
             ),
           ],
         ),

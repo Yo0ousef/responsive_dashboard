@@ -11,7 +11,7 @@ final String text;
     return TextField(
       decoration: InputDecoration(
         hintText: text,
-        hintStyle: AppStyles.styleRegular14.copyWith(fontSize: 16),
+        hintStyle: AppStyles.styleRegular14(context).copyWith(fontSize: 16),
         fillColor: Color(0xFFFAFAFA),
         filled: true,
         border:borderBuilder() ,
